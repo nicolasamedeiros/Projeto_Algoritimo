@@ -22,23 +22,29 @@ int main (){
     system("cls");
   } while(qdapessoas < 10);   
 
-  for (int i = 0; i <= qdapessoas; i++) {
+  for (int i = 0; i < qdapessoas; i++) {
     do
     {
       printf("Qual o sexo do cliente: ");
       fflush(stdin);
       scanf("%c", &sexo);
-    } while (sexo != 'M' || sexo != 'F');
+    } while (sexo == 'M' || sexo == 'F');
     
     if (sexo == 'M') {
       sexoM =+ 1;
-      printf("Qual a idade do cliente: ");
-      scanf("%d", &idade);
+      do
+      {
+        printf("Qual a idade do cliente: ");
+        scanf("%d", &idade);
+      } while (idade >= 3 && idade <= 100);
     }
     else if (sexo == 'F') {
       sexoF =+ 1;
-      printf("Qual a idade da cliente: ");
-      scanf("%d", &idade);
+      do
+      {
+        printf("Qual a idade da cliente: ");
+        scanf("%d", &idade);
+      } while (idade >= 3 && idade <= 100);
     }
   }
                        
