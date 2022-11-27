@@ -5,7 +5,7 @@
 #include<string.h>
 
 int main (){
-  int sessao, qdapessoas, sexo = 0, idade;
+  int sessao, qdapessoas, sexo, sexoM = 0, sexoF = 0, idade;
   const cheia = 50, meia = 25;
           
   do
@@ -22,12 +22,30 @@ int main (){
     system("cls");
   } while(qdapessoas < 10);   
 
-  for (int i = 0; i <= qdapessoas; i++) {
+  for (int i = 0; i < qdapessoas; i++) {
     do
     {
-      printf("Digite o sexo do cliente: ");
+      printf("Qual o sexo do cliente: ");
+      fflush(stdin);
       scanf("%c", &sexo);
     } while (sexo == 'M' || sexo == 'F');
+    
+    if (sexo == 'M') {
+      sexoM =+ 1;
+      do
+      {
+        printf("Qual a idade do cliente: ");
+        scanf("%d", &idade);
+      } while (idade >= 3 && idade <= 100);
+    }
+    else if (sexo == 'F') {
+      sexoF =+ 1;
+      do
+      {
+        printf("Qual a idade da cliente: ");
+        scanf("%d", &idade);
+      } while (idade >= 3 && idade <= 100);
+    }
   }
                        
 }
