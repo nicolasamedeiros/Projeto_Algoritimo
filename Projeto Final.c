@@ -52,6 +52,7 @@ int main (){
             } else {
                 idoso = idoso + 1;
             }
+            
         }
     }
 
