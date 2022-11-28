@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<locale.h>
- //salve
+
 int main (){
   int sessao, qdapessoas, sexoM = 0, sexoF = 0, idade, i,ingresso,custoTotal=0,count=1,crianca=0,adolescente=0,adulto=0,idoso=0;
   char sexo;
