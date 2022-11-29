@@ -1,3 +1,5 @@
+//Nicolas Almeida - UC22103171 - Engenharia de software / Marcos Vinicius Gonçalves da Silva - UC22200517 - Engenharia de Software / Ronaldo Cavalcante Vicente - UC22200227  - Engenharia de Software / Erik daniel Silva de Souza - UC22200407
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
