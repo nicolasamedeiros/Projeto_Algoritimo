@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main(){
+
+    int quantidadepipoca, tamanho = 0, l, k;
+    const pipocaP = 10, pipocaM = 15, pipocaG = 20;
+    float valorpipoca = 0.0, vpTotal;
+
+    for(l=1;l<3; l++){
+
+        printf("Digite quantidade pipoca para a pessoa %d: ", l);
+        scanf("%d", &quantidadepipoca);
+        for (k=1; k<quantidadepipoca+1; k++){
+
+            printf("Escolha o tamanho da pipoca (1)pequena, (2)Média, (3)grande para a pessoa %d: ", k);
+            scanf("%d", &tamanho);
+
+            switch(tamanho)
+            {
+                case 1 :
+                {
+                    valorpipoca =quantidadepipoca * pipocaP;
+                    vpTotal +=quantidadepipoca * pipocaP;
+                    break;
+                }
+
+                case 2 :
+                {
+                    valorpipoca = quantidadepipoca * pipocaM;
+                    vpTotal += quantidadepipoca * pipocaM;
+                    break;
+                }
+
+                case 3 :
+                {
+                    valorpipoca = quantidadepipoca * pipocaG;
+                    vpTotal += quantidadepipoca * pipocaG;
+                    break;
+                }
+
+                default:
+                {
+                    printf("\nNumero invalido!\n");
+                }
+            }
+
+            printf("\nValor da pipoca: %.2f\n", valorpipoca);
+        }
+        printf("\nValor da pipoca total: %.2f\n", vpTotal);
+        vpTotal = 0;
+
+    }
+}
