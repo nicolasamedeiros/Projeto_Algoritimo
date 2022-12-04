@@ -34,7 +34,7 @@ int main (){
       if (sexo == 'M' || sexo =='m') {
         sexoM = sexoM + 1;
         do{
-          printf("Qual a idade do %d° cliente: ",count);
+          printf("Qual a idade do %d° cliente: ",i+1);
           scanf("%d", &idade);
         }while(idade<=3 && idade>=100);
       }
@@ -63,7 +63,7 @@ int main (){
     do{
       printf("O ingresso sera meia ou inteira (1)Meia (2)Inteira : ");
       scanf("%d", &ingresso);
-    } while(ingresso != 1 || ingresso !=2);
+    } while(ingresso != 1 || ingresso != 2);
 
     if(ingresso == 1){
         custoTotal = custoTotal + 25;
