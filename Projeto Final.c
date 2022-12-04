@@ -53,24 +53,20 @@ int main (){
                 adulto = adulto + 1;
             } else {
                 idoso = idoso + 1;
-            }
-            
-        }
+            }                
+      }
     }
 
-
-
-    do{
+    for(i; i <= qdapessoas; i++){
       printf("O ingresso sera meia ou inteira (1)Meia (2)Inteira : ");
       scanf("%d", &ingresso);
-    } while(ingresso != 1 || ingresso != 2);
 
-    if(ingresso == 1){
+      if(ingresso == 1){
         custoTotal = custoTotal + 25;
-    } else{
+      } else{
         custoTotal = custoTotal + 50;
+      }
     }
-    count++;
 
 	printf("\nSexo Feminino = %d",sexoF);
 	printf("\nSexo Masculino = %d",sexoM);
