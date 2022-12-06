@@ -25,26 +25,23 @@ int main (){
     for(i=0;i<qdapessoas;i++){
 
       for(int j = 0;j<qdapessoas;j++) {
-        printf("Qual o sexo do %d° cliente: ",count);
+        system("cls");
+        printf("Qual o sexo do %d cliente (M) Masculino - (F) Feminino : ",count);
         fflush(stdin);
         scanf("%c", &sexo);
         count++;
-      }
+        if (sexo == 'M' || sexo =='m') {
+          sexoM = sexoM + 1;
+         }else if (sexo == 'F' || sexo =='f') {
+          sexoF =  sexoF + 1;
+         }
+        }
+        do{
+        printf("Qual a idade do %d° cliente: ",count);
+        scanf("%d", &idade);
+        }while(idade>=3 && idade<=100);
 
-    if (sexo == 'M' || sexo =='m') {
-      sexoM = sexoM + 1;
-      do{
-        printf("Qual a idade do %d° cliente: ",count);
-        scanf("%d", &idade);
-      }while(idade>=3 && idade<=100);
-    }
-    else if (sexo == 'F' || sexo =='f') {
-      sexoF =  sexoF + 1;
-      do{
-        printf("Qual a idade do %d° cliente: ",count);
-        scanf("%d", &idade);
-      }while(idade>=3 && idade<=100);
-    }
+        
     
     if(idade>=3 && idade<14){
         	crianca = crianca + 1;
