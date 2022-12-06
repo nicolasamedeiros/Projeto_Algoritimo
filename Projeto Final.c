@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<stdio.h>//Biblioteca para entrada de dados
 #include<stdlib.h>
 #include<string.h>
 #include<locale.h>
@@ -36,8 +36,8 @@ int main (){
           sexoF =  sexoF + 1;
          }
         }
-        do{
-        printf("Qual a idade do %d° cliente: ",count);
+        do{ 
+        printf("Qual a idade do %d cliente: ",count);
         scanf("%d", &idade);
         }while(idade>=3 && idade<=100);
 
