@@ -1,5 +1,7 @@
 //Nicolas Almeida - UC22103171 - Engenharia de software / Marcos Vinicius Gonï¿½alves da Silva - UC22200517 - Engenharia de Software / Ronaldo Cavalcante Vicente - UC22200227  - Engenharia de Software / Erik Daniel Silva de Souza - UC22200407
 
+//utilizar a iso 8859-15 no lugar da utf-8
+
 //Bibliotecas
 #include<stdio.h>
 #include<stdlib.h>
@@ -8,7 +10,7 @@
 
 int main (){
   //Declaraclaração das variaveis
-  int sessao, qdapessoas, sexoM = 0, sexoF = 0, idade, i,ingresso,custoTotal=0,count=1,crianca=0,adolescente=0,adulto=0,idoso=0,quantidadepipoca=1, tamanho = 0, l, k, j, qntPessoasSessao=1;
+  int sessao, qdapessoas, sexoM = 0, sexoF = 0, idade, i, ingresso, custoTotal=0, count=1, crianca=0, adolescente=0, adulto=0, idoso=0,quantidadepipoca=1, tamanho = 0, l, k, j, qntPessoasSessao=1;
   const pipocaP = 10, pipocaM = 15, pipocaG = 20;
   float valorpipoca = 0.0;
   char sexo;
@@ -29,7 +31,8 @@ int main (){
 
   //pergunta a quantidade de pessoas na sessao enquanto a quantidade de pessoas for menor que 10  
   do 
-  { setlocale(LC_ALL, "Portuguese");
+  { 
+    setlocale(LC_ALL, "Portuguese");
     printf("Digite a quantidade de pessoas na %dº sessao: ",qntPessoasSessao);
     scanf("%d", &qdapessoas);
     system("cls");
@@ -129,6 +132,8 @@ count=1;
                     printf("\nNumero invalido!\n");
                 }
             }
+            printf("valor da pipoca: R$%.2f\n", valorpipoca);
+            system("pause");
           }
 
             
@@ -137,13 +142,14 @@ count=1;
 
   // Saí­da de dados da primeira e segunda sessão
   setlocale(LC_ALL, "Portuguese");
-	printf("\nSexo Feminino = %d",sexoF);
-	printf("\nSexo Masculino = %d",sexoM);
-	printf("\nCrianças = %d",crianca);
-	printf("\nAdolescentes = %d",adolescente);
-	printf("\nAdulto = %d",adulto);
-	printf("\nIdoso = %d\n\n",idoso);
-	
+	printf("Sexo Feminino = %d\n",sexoF);
+	printf("Sexo Masculino = %d\n",sexoM);
+	printf("Crianças = %d\n",crianca);
+	printf("Adolescentes = %d\n",adolescente);
+	printf("Adulto = %d\n",adulto);
+	printf("Idoso = %d\n",idoso);
+  printf("Valor total arrecadado na sessão R$ = %d\n", custoTotal);
+
   system("pause");
 
   
