@@ -7,16 +7,16 @@
 #include<locale.h>
 
 int main (){
-  //Declarað§ð£o das variaveis
+  //Declaraclaração das variaveis
   int sessao, qdapessoas, sexoM = 0, sexoF = 0, idade, i,ingresso,custoTotal=0,count=1,crianca=0,adolescente=0,adulto=0,idoso=0,quantidadepipoca=1, tamanho = 0, l, k, j, qntPessoasSessao=1;
   const pipocaP = 10, pipocaM = 15, pipocaG = 20;
   float valorpipoca = 0.0;
   char sexo;
   
-  //Funð§ð£o para aceitar caracteres especiais
+  //Função para aceitar caracteres especiais
   setlocale(LC_ALL, "Portuguese");
 
-  //Pergunta a quantidade de sessðµes enquanto o valor for diferente de 2
+  //Pergunta a quantidade de sessões enquanto o valor for diferente de 2
   do
   { setlocale(LC_ALL, "Portuguese");
     printf("Digite a quantidade de sessões: ");
@@ -63,7 +63,7 @@ int main (){
         }while(idade<3 && idade>100);
     }
     
-    if(idade>=3 && idade<14){ //se idade for maior ou igual a 3 e idade menor que 14 acrescenta um na variavel crianð§a
+    if(idade>=3 && idade<14){ //se idade for maior ou igual a 3 e idade menor que 14 acrescenta um na variavel criança
         	crianca = crianca + 1;
 		} else if(idade < 18){ //se idade for menor que 18 acrescenta um na variavel adolescnete
 			adolescente = adolescente + 1;
@@ -73,7 +73,7 @@ int main (){
 			idoso = idoso + 1;
 		}
 
-    //pergunta se o ingresso serð¡ meia ou interira enquanto o valor for diferente de 1 e 2
+    //pergunta se o ingresso será meia ou interira enquanto o valor for diferente de 1 e 2
     do{
     printf("O ingresso sera meia ou inteira (1)Meia (2)Inteira : ");
     scanf("%d", &ingresso);
@@ -101,7 +101,7 @@ count=1;
             printf("Escolha o tamanho da pipoca (1)pequena, (2)Média, (3)Grande para a pessoa %dº: ", count);
             scanf("%d", &tamanho);
             
-            switch(tamanho)//como abre um  lek de opð§ðµes para o cliente decidir 
+            switch(tamanho)//como abre um  lek de opções para o cliente decidir 
             {
                 case 1 :
                 {
@@ -135,7 +135,7 @@ count=1;
     count++; system("cls");system("pause");
   } 
 
-  // Sað­da de dados da primeira e segunda sessð£o
+  // Sað­da de dados da primeira e segunda sessão
   setlocale(LC_ALL, "Portuguese");
 	printf("\nSexo Feminino = %d",sexoF);
 	printf("\nSexo Masculino = %d",sexoM);
