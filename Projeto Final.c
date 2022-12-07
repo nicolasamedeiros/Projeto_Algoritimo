@@ -135,7 +135,7 @@ count=1;
     count++; system("cls");system("pause");
   } 
 
-  // Sað­da de dados da primeira e segunda sessão
+  // Saí­da de dados da primeira e segunda sessão
   setlocale(LC_ALL, "Portuguese");
 	printf("\nSexo Feminino = %d",sexoF);
 	printf("\nSexo Masculino = %d",sexoM);
