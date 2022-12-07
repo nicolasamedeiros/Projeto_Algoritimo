@@ -36,7 +36,7 @@ int main (){
     printf("Digite a quantidade de pessoas na %dº sessao: ",qntPessoasSessao);
     scanf("%d", &qdapessoas);
     system("cls");
-  } while(qdapessoas < 2);
+  } while(qdapessoas < 10);
 
     //enquanto i for menor que a quantidade de pessoas ele executa o codigo e no final acresenta mais um no i
     for(i=0;i<qdapessoas;i++){
