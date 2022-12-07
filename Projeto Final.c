@@ -7,19 +7,19 @@
 #include<locale.h>
 
 int main (){
-  //DeclaraÃ§Ã£o das variaveis
-  int sessao, qdapessoas, sexoM = 0, sexoF = 0, idade, i,ingresso,custoTotal=0,count=1,crianca=0,adolescente=0,adulto=0,idoso=0,quantidadepipoca, tamanho = 0, l, k, j, qntPessoasSessao=1;
+  //Declarað§ð£o das variaveis
+  int sessao, qdapessoas, sexoM = 0, sexoF = 0, idade, i,ingresso,custoTotal=0,count=1,crianca=0,adolescente=0,adulto=0,idoso=0,quantidadepipoca=1, tamanho = 0, l, k, j, qntPessoasSessao=1;
   const pipocaP = 10, pipocaM = 15, pipocaG = 20;
   float valorpipoca = 0.0;
   char sexo;
   
-  //FunÃ§Ã£o para aceitar caracteres especiais
+  //Funð§ð£o para aceitar caracteres especiais
   setlocale(LC_ALL, "Portuguese");
 
-  //Pergunta a quantidade de sessÃµes enquanto o valor for diferente de 2
+  //Pergunta a quantidade de sessðµes enquanto o valor for diferente de 2
   do
-  { 
-    printf("Digite a quantidade de sessÃµes: ");
+  { setlocale(LC_ALL, "Portuguese");
+    printf("Digite a quantidade de sessões: ");
     scanf("%d",&sessao);
     system("cls");
   } while (sessao != 2);
@@ -29,17 +29,18 @@ int main (){
 
   //pergunta a quantidade de pessoas na sessao enquanto a quantidade de pessoas for menor que 10  
   do 
-  {
-    printf("Digite a quantidade de pessoas na %dÂº sessao: ",qntPessoasSessao);
+  { setlocale(LC_ALL, "Portuguese");
+    printf("Digite a quantidade de pessoas na %dº sessao: ",qntPessoasSessao);
     scanf("%d", &qdapessoas);
     system("cls");
-  } while(qdapessoas < 10);
+  } while(qdapessoas < 2);
 
     //enquanto i for menor que a quantidade de pessoas ele executa o codigo e no final acresenta mais um no i
     for(i=0;i<qdapessoas;i++){
 
       //pergunta o sexo do cliente e armazena na variavel sexo
-      printf("Qual o sexo do %dÂº cliente (M) Masculino (F) Feminino: ",count);
+      setlocale(LC_ALL, "Portuguese");
+      printf("Qual o sexo do %dº cliente (M) Masculino (F) Feminino: ",count);
       fflush(stdin);
       scanf("%c", &sexo);
 
@@ -47,7 +48,8 @@ int main (){
     if (sexo == 'M' || sexo=='m') {
           sexoM = sexoM + 1;
         do{
-        printf("Qual a idade do %dÂº cliente: ",count);
+        setlocale(LC_ALL, "Portuguese");
+        printf("Qual a idade do %dº cliente: ",count);
         scanf("%d", &idade);
         }while(idade<3 && idade>100);
     }
@@ -55,12 +57,13 @@ int main (){
     else if (sexo == 'F' || sexo =='f') {
       sexoF =  sexoF + 1;
         do{
-        printf("Qual a idade do %dï¿½ cliente: ",count);
+        setlocale(LC_ALL, "Portuguese");  
+        printf("Qual a idade do %dº cliente: ",count);
         scanf("%d", &idade);
         }while(idade<3 && idade>100);
     }
     
-    if(idade>=3 && idade<14){ //se idade for maior ou igual a 3 e idade menor que 14 acrescenta um na variavel crianÃ§a
+    if(idade>=3 && idade<14){ //se idade for maior ou igual a 3 e idade menor que 14 acrescenta um na variavel crianð§a
         	crianca = crianca + 1;
 		} else if(idade < 18){ //se idade for menor que 18 acrescenta um na variavel adolescnete
 			adolescente = adolescente + 1;
@@ -70,7 +73,7 @@ int main (){
 			idoso = idoso + 1;
 		}
 
-    //pergunta se o ingresso serÃ¡ meia ou interira enquanto o valor for diferente de 1 e 2
+    //pergunta se o ingresso serð¡ meia ou interira enquanto o valor for diferente de 1 e 2
     do{
     printf("O ingresso sera meia ou inteira (1)Meia (2)Inteira : ");
     scanf("%d", &ingresso);
@@ -89,15 +92,16 @@ int main (){
 count=1;
           //enquanto i for menor que a quantidade de pessoas ele executa o codigo e no final acresenta mais um no i
         for (i=0; i<qdapessoas; i++){
-            
-            printf("Informe quantas pipocas o %dÂº Cliente deseja: ", count);
+            setlocale(LC_ALL, "Portuguese");
+            printf("Informe quantas pipocas o %dº Cliente deseja: ", count);
             scanf("%d", &quantidadepipoca);
             
             for(k=0;k<quantidadepipoca;k++){ //enquanto k for menor que quantidade de pipoca ele executa o codigo e no final acresenta mais um no i
-            printf("Escolha o tamanho da pipoca (1)pequena, (2)Mï¿½dia, (3)Grande para a pessoa %d: ", k);
+            setlocale(LC_ALL, "Portuguese");
+            printf("Escolha o tamanho da pipoca (1)pequena, (2)Média, (3)Grande para a pessoa %dº: ", count);
             scanf("%d", &tamanho);
             
-            switch(tamanho)//como abre um  lek de opÃ§Ãµes para o cliente decidir 
+            switch(tamanho)//como abre um  lek de opð§ðµes para o cliente decidir 
             {
                 case 1 :
                 {
@@ -131,10 +135,11 @@ count=1;
     count++; system("cls");system("pause");
   } 
 
-  // SaÃ­da de dados da primeira e segunda sessÃ£o
+  // Sað­da de dados da primeira e segunda sessð£o
+  setlocale(LC_ALL, "Portuguese");
 	printf("\nSexo Feminino = %d",sexoF);
 	printf("\nSexo Masculino = %d",sexoM);
-	printf("\nCrianï¿½as = %d",crianca);
+	printf("\nCrianças = %d",crianca);
 	printf("\nAdolescentes = %d",adolescente);
 	printf("\nAdulto = %d",adulto);
 	printf("\nIdoso = %d\n\n",idoso);
