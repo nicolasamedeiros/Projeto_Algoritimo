@@ -1,5 +1,4 @@
 //Nicolas Almeida - UC22103171 - Engenharia de software / Marcos Vinicius Gonçalves da Silva - UC22200517 - Engenharia de Software / Ronaldo Cavalcante Vicente - UC22200227  - Engenharia de Software
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -20,7 +19,7 @@ int main (){
     printf("Digite a quantidade de pessoas na sessao: ");
     scanf("%d", &qdapessoas);
     system("cls");
-  } while(qdapessoas < 10);   
+  } while(qdapessoas < 4);   
 
   for (int i = 0; i < qdapessoas; i++) {
     do
@@ -28,7 +27,7 @@ int main (){
       printf("Qual o sexo do cliente: ");
       fflush(stdin);
       scanf("%c", &sexo);
-    } while (sexo == 'M' || sexo == 'F');
+    } while (sexo != 'M' || sexo == 'F');
     
     if (sexo == 'M') {
       sexoM =+ 1;
@@ -36,7 +35,7 @@ int main (){
       {
         printf("Qual a idade do cliente: ");
         scanf("%d", &idade);
-      } while (idade >= 3 && idade <= 100);
+      } while (idade < 3 && idade > 100);
     }
     else if (sexo == 'F') {
       sexoF =+ 1;
@@ -44,7 +43,7 @@ int main (){
       {
         printf("Qual a idade da cliente: ");
         scanf("%d", &idade);
-      } while (idade >= 3 && idade <= 100);
+      } while (idade < 3 && idade > 100);
     }
   }
                        
