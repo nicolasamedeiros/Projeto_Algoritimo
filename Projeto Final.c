@@ -19,7 +19,7 @@ int main (){
   //Pergunta a quantidade de sessões enquanto o valor for diferente de 2
   do
   { 
-    printf("Digite a quantidade de sessoes: ");
+    printf("Digite a quantidade de sessões: ");
     scanf("%d",&sessao);
     system("cls");
   } while (sessao != 2);
@@ -30,7 +30,7 @@ int main (){
   //pergunta a quantidade de pessoas na sessao enquanto a quantidade de pessoas for menor que 10  
   do 
   {
-    printf("Digite a quantidade de pessoas na %d� sessao: ",qntPessoasSessao);
+    printf("Digite a quantidade de pessoas na %dº sessao: ",qntPessoasSessao);
     scanf("%d", &qdapessoas);
     system("cls");
   } while(qdapessoas < 10);
@@ -39,7 +39,7 @@ int main (){
     for(i=0;i<qdapessoas;i++){
 
       //pergunta o sexo do cliente e armazena na variavel sexo
-      printf("Qual o sexo do %d cliente (M) Masculino (F) Feminino: ",count);
+      printf("Qual o sexo do %dº cliente (M) Masculino (F) Feminino: ",count);
       fflush(stdin);
       scanf("%c", &sexo);
 
@@ -47,7 +47,7 @@ int main (){
     if (sexo == 'M' || sexo=='m') {
           sexoM = sexoM + 1;
         do{
-        printf("Qual a idade do %d� cliente: ",count);
+        printf("Qual a idade do %dº cliente: ",count);
         scanf("%d", &idade);
         }while(idade<3 && idade>100);
     }
@@ -87,17 +87,17 @@ int main (){
 }
 
 count=1;
-
+          //enquanto i for menor que a quantidade de pessoas ele executa o codigo e no final acresenta mais um no i
         for (i=0; i<qdapessoas; i++){
             
-            printf("Informe quantas pipocas o %d� Cliente deseja: ", count);
+            printf("Informe quantas pipocas o %dº Cliente deseja: ", count);
             scanf("%d", &quantidadepipoca);
             
-            for(k=0;k<quantidadepipoca;k++){
+            for(k=0;k<quantidadepipoca;k++){ //enquanto k for menor que quantidade de pipoca ele executa o codigo e no final acresenta mais um no i
             printf("Escolha o tamanho da pipoca (1)pequena, (2)M�dia, (3)Grande para a pessoa %d: ", k);
             scanf("%d", &tamanho);
             
-            switch(tamanho)
+            switch(tamanho)//como abre um  lek de opções para o cliente decidir 
             {
                 case 1 :
                 {
@@ -131,7 +131,7 @@ count=1;
     count++; system("cls");system("pause");
   } 
 
-
+  // Saída de dados da primeira e segunda sessão
 	printf("\nSexo Feminino = %d",sexoF);
 	printf("\nSexo Masculino = %d",sexoM);
 	printf("\nCrian�as = %d",crianca);
